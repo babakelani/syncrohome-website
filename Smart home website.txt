@@ -1,0 +1,95 @@
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import { CheckCircle, Lightbulb, Lock, Smartphone, Camera, Volume2 } from "lucide-react";
+import { motion } from "framer-motion";
+
+export default function Home() {
+  return (
+    <div className="min-h-screen bg-gray-100 p-6 text-gray-800">
+      <header className="text-center py-10">
+        <h1 className="text-4xl font-bold text-blue-600">Syncrohome Nest Technologies</h1>
+        <p className="mt-4 text-lg">Smart Living, Simplified</p>
+        <p className="text-sm text-gray-500">Affordable and scalable smart home automation for the modern Nigerian home</p>
+      </header>
+
+      <section className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-10">
+        <Card className="bg-white shadow-lg rounded-2xl">
+          <CardContent className="p-6 text-center">
+            <Lightbulb className="mx-auto text-yellow-500" size={40} />
+            <h3 className="text-xl font-semibold mt-4">Smart Lighting</h3>
+            <p className="text-sm text-gray-600 mt-2">Control your home lighting with voice or phone. Set schedules, moods, and save energy effortlessly.</p>
+          </CardContent>
+        </Card>
+
+        <Card className="bg-white shadow-lg rounded-2xl">
+          <CardContent className="p-6 text-center">
+            <Lock className="mx-auto text-blue-500" size={40} />
+            <h3 className="text-xl font-semibold mt-4">Smart Security</h3>
+            <p className="text-sm text-gray-600 mt-2">Integrated locks, cameras, and alarms. Keep your home secure with real-time mobile alerts and control.</p>
+          </CardContent>
+        </Card>
+
+        <Card className="bg-white shadow-lg rounded-2xl">
+          <CardContent className="p-6 text-center">
+            <Smartphone className="mx-auto text-green-500" size={40} />
+            <h3 className="text-xl font-semibold mt-4">Voice & App Control</h3>
+            <p className="text-sm text-gray-600 mt-2">Control all your devices via Google Assistant, Alexa, or your smartphone from anywhere in the world.</p>
+          </CardContent>
+        </Card>
+      </section>
+
+      <section className="mt-16 text-center">
+        <h2 className="text-2xl font-bold">Our Service Packages</h2>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6">
+          <Card className="bg-white shadow-md rounded-2xl">
+            <CardContent className="p-4">
+              <h3 className="text-lg font-semibold text-blue-600">Starter Package</h3>
+              <p className="text-sm mt-2">Basic Smart Lighting Setup</p>
+            </CardContent>
+          </Card>
+
+          <Card className="bg-white shadow-md rounded-2xl">
+            <CardContent className="p-4">
+              <h3 className="text-lg font-semibold text-blue-600">Intermediate Package</h3>
+              <p className="text-sm mt-2">Lighting + Smart Locks + Camera Integration</p>
+            </CardContent>
+          </Card>
+
+          <Card className="bg-white shadow-md rounded-2xl">
+            <CardContent className="p-4">
+              <h3 className="text-lg font-semibold text-blue-600">Full Package</h3>
+              <p className="text-sm mt-2">Multiroom audio automation + Full voice control of the whole house + Intercom system</p>
+            </CardContent>
+          </Card>
+        </div>
+      </section>
+
+      <section className="mt-16 text-center">
+        <h2 className="text-2xl font-bold">Our Portfolio</h2>
+        <p className="text-sm text-gray-600 mt-2">Take a look at some of our completed projects</p>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6">
+          <img src="/portfolio1.jpg" alt="Smart Lighting Setup" className="rounded-xl shadow" />
+          <img src="/portfolio2.jpg" alt="Security System Integration" className="rounded-xl shadow" />
+          <img src="/portfolio3.jpg" alt="Voice-Controlled Living Room" className="rounded-xl shadow" />
+        </div>
+      </section>
+
+      <section className="mt-16 text-center">
+        <h2 className="text-2xl font-bold">Get a Free Smart Home Consultation</h2>
+        <p className="text-sm text-gray-600 mt-2">Let’s design your dream smart home. No pressure, just possibilities.</p>
+        <div className="mt-4 flex justify-center gap-4 flex-wrap">
+          <a href="https://wa.me/2347081800061">
+            <Button className="text-white bg-green-600 hover:bg-green-700">Contact Us on WhatsApp</Button>
+          </a>
+          <a href="https://instagram.com/syncrohome_nestech" target="_blank">
+            <Button className="text-white bg-pink-600 hover:bg-pink-700">Visit Instagram</Button>
+          </a>
+        </div>
+      </section>
+
+      <footer className="mt-20 text-center text-sm text-gray-400">
+        &copy; {new Date().getFullYear()} Syncrohome Nest Technologies. All rights reserved.
+      </footer>
+    </div>
+  );
+}
